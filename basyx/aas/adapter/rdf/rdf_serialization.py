@@ -34,7 +34,7 @@ NS_AAS = _generic.XML_NS_MAP["aas"]
 class AASToRDFEncoder():
     def __init__(self) -> None:
         self.graph = Graph()
-        self.aas = Namespace(NS_AAS)
+        self.aas = Namespace(NS_AAS+"/")
         self.graph.bind("owl", OWL)
         self.graph.bind("xsd", XSD)
         self.graph.bind("aas", self.aas)
